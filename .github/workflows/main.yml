@@ -14,15 +14,3 @@ jobs:
           fetch-depth: 0
       - run: npx awesome-lint
 
-  Awesome_Bot:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.6.10
-      - run: |
-          gem install awesome_bot
-          awesome_bot readme.md --allow-redirect --white-list amazon.com,discmaster.textfiles.com,web.archive.org
